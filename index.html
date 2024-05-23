@@ -64,13 +64,13 @@ target=_blank>谷歌浏览器[下载]</A></DIV>
 <DIV class=m>
 <DIV>以下域名列表随时更换，请先保存此页面，最新的域名:</DIV>
 <DIV id=newurllink>
-<a class="pic" href="//" id=dynamic-link0><img  src="1.png"/></a>
+<a class="pic" href="//" id=dynamic-link0>载入中...</a>
 </DIV>
 <DIV id=newurllink>
-<a class="pic" href="//" id=dynamic-link1><img  src="2.png"/></a>
+<a class="pic" href="//" id=dynamic-link1>载入中...</a>
 </DIV>
 <DIV id=newurllink>
-<a class="pic" href="//" id=dynamic-link2><img  src="3.png"/></a>
+<a class="pic" href="//" id=dynamic-link2>载入中...</a>
 </DIV>
 <DIV class=des>最新域名可访问, 请务必收藏 <FONT color=blue><SPAN 
 id=newurl>pp51.net</SPAN></FONT>, 否则您真的会遗失我们.</DIV></DIV><!--method 1 start-->
@@ -80,16 +80,6 @@ id=newurl>pp51.net</SPAN></FONT>, 否则您真的会遗失我们.</DIV></DIV><!-
 <DIV id=newurllink><A class=panel href="https://a.app.qq.com/o/simple.jsp?pkgname=com.android.chrome&channel=0002160650432d595942&fromcase=60001" 
 target=_blank>谷歌浏览器[应用宝]</A></DIV>
 <FONT color=blue><SPAN id=newurl>大部分手机自带浏览器和国产浏览器经常拦截，使用微软Edge 苹果Safari 谷歌Chrome 不会拦截，手机应用商店下载推荐任意一款浏览器！</SPAN></FONT></DIV>
-<DIV class=method><SPAN>视频网最新网址:-</SPAN></DIV>
-<DIV class=m>
-<DIV>尝试使用我们最新的域名:-</DIV>
-<DIV id=newurllink>
-<a class="pic" href="//" id=dynamic-link3><img  src="1.png"/></a>
-</DIV>
-<DIV id=newurllink>
-<a class="pic" href="//" id=dynamic-link4><img  src="2.png"/></a>
-</DIV>
-</DIV><!--method 1 start-->
 <DIV style="DISPLAY: none"><A 
 target=_blank><IMG border=0 src="更换域名通知_mhtml_files/mht8FD9(1).tmp" width=20 
 height=20></A>|</DIV></DIV>
@@ -109,11 +99,13 @@ async function fetchAndSetLinks() {
         const data = await response.text();  
         let currentDomain = data.trim();
  
-        for (let i = 0; i < 5; i++) {  
-            let linkId = `dynamic-link${i}`;  
+        for (let i = 0; i < 3; i++) {  
+            let linkId = `dynamic-link${i}`; 
+            let ii=i + 1;
             let dynamicLink = document.getElementById(linkId);  
             if (dynamicLink) {  
-                dynamicLink.href = `https://${currentDomain}`;  
+                dynamicLink.href = `https://${currentDomain}`;
+                dynamicLink.innerHTML = `<img  src="${ii}.png"/>`;
             }  
         }  
  
