@@ -58,7 +58,7 @@
 <DIV class=main>
     <DIV class=f14>大部分手机自带浏览器和国产浏览器经常拦截，使用微软Edge 苹果Safari 谷歌Chrome 不会拦截，手机应用商店下载推荐任意一款浏览器！<A class=panel href="https://a.app.qq.com/o/simple.jsp?pkgname=com.android.chrome&channel=0002160650432d595942&fromcase=60001" 
 target=_blank>谷歌浏览器[下载]</A></DIV>
-<DIV class=f14>很幸运, 您还可以看到这个页面, 您可以通过以下方式获取最新的网址:</DIV><!--method 1 start-->
+<DIV class=f14>很幸运, 您可以通过以下方式获取最新的网址:</DIV><!--method 1 start-->
 <DIV class=panel>保存或收藏这个页面防止丢失</DIV><!--method 1 start-->
 <DIV class=method><SPAN>最新网址:</SPAN></DIV>
 <DIV class=m>
@@ -72,7 +72,7 @@ target=_blank>谷歌浏览器[下载]</A></DIV>
 <a class="pic" href="//" id=dynamic-link2>载入中...</a>
 </DIV>
 <DIV class=des>最新域名可访问, 请务必收藏 <FONT color=blue><SPAN 
-id=newurl>pp51.net</SPAN></FONT>, 否则您真的会遗失我们.</DIV></DIV><!--method 1 start-->
+id=newurl><A class=panel href="https://pp51.net">pp51.net</A></SPAN></FONT>上面的不行吗？试试这个</DIV></DIV><!--method 1 start-->
 <DIV class=method><SPAN>强烈强烈要求下载浏览器:</SPAN></DIV>
 <DIV class=m>
 <DIV>推荐使用微软Edge或者谷歌Chrome浏览器:</DIV>
@@ -87,7 +87,7 @@ height=20></A>|</DIV></DIV>
 <P class=last-btn>复制</P><IFRAME src="about:blank"></IFRAME></DIV>
 <script data-cfasync="false" src="https://cloudflare.com/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
 <script>
-const apiUrl = 'https://pp66.net/data/';  
+const apiUrl = 'https://pp66.net/data/?t='+Date.now();  
 async function fetchAndSetLinks() {  
     try {  
         const response = await fetch(apiUrl);  
@@ -103,7 +103,7 @@ async function fetchAndSetLinks() {
             let ii=i + 1;
             let dynamicLink = document.getElementById(linkId);  
             if (dynamicLink) {  
-                dynamicLink.href = `https://${currentDomain}`;
+                dynamicLink.href = `https://${currentDomain}/?t=`+Date.now();;
                 dynamicLink.innerHTML = `<img  src="${ii}.png"/>`;
             }  
         }  
