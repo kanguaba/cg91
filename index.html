@@ -103,8 +103,14 @@ async function fetchAndSetLinks() {
             let ii=i + 1;
             let dynamicLink = document.getElementById(linkId);  
             if (dynamicLink) {  
-                dynamicLink.href = `https://${currentDomain}/?t=`+Date.now();;
-                dynamicLink.innerHTML = `<img  src="${ii}.png"/>`;
+                      dynamicLink.href = `https://${currentDomain}/`;
+                      dynamicLink.innerHTML = `<img  src="${ii}.png"/>`; 
+                      dynamicLink.addEventListener('click', function(event) {  
+                      event.preventDefault();  
+                      let timestampedUrl = `https://${currentDomain}/?t=` + Date.now();  
+  
+                     window.location.href = timestampedUrl;  
+                  });  
             }  
         }  
  
