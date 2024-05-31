@@ -112,7 +112,6 @@ async function fetchAndSetLinks() {
             let ii=i + 1;
             let dynamicLink = document.getElementById(linkId);  
             if (dynamicLink) {  
-                 if(i===2){ currentDomain = BkDomain; }
                       dynamicLink.href = `https://${currentDomain}/`;
                       dynamicLink.innerHTML = `<img  src="${ii}.png"/>`; 
                       dynamicLink.addEventListener('click', function(event) {  
