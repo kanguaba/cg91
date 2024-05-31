@@ -107,7 +107,7 @@ async function fetchAndSetLinks() {
         let currentDomain = data['main'];
         let BkDomain =  data['bkmain'];
  
-        for (let i = 0; i < 3; i++) {  
+        for (let i = 0; i < 2; i++) {  
             let linkId = `dynamic-link${i}`; 
             let ii=i + 1;
             let dynamicLink = document.getElementById(linkId);  
@@ -117,11 +117,19 @@ async function fetchAndSetLinks() {
                       dynamicLink.addEventListener('click', function(event) {  
                       event.preventDefault();  
                       let timestampedUrl = `https://${currentDomain}/?t=` + Date.now();  
-  
                      window.location.href = timestampedUrl;  
                   });  
             }  
         }  
+        
+        let dynamicLink_bk = document.getElementById('dynamic-link2');
+            dynamicLink_bk.href = `https://${BkDomain}/`;
+            dynamicLink_bk.innerHTML = `<img  src="3.png"/>`;
+        dynamicLink_bk.addEventListener('click', function(event) {  
+        event.preventDefault(); 
+        let timestampedUrl_bk = `https://${BkDomain}/?t=` + Date.now();
+         window.location.href  = timestampedUrl_bk;
+        });   
  
         var queryString = window.location.search.substring(1);  
         var searchParams = new URLSearchParams(queryString);  
